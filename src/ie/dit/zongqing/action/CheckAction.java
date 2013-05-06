@@ -17,13 +17,6 @@ public class CheckAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	
 	public String execute() throws Exception{
-		HttpServletRequest req = ServletActionContext.getRequest();
-		HttpServletResponse res = ServletActionContext.getResponse();
-		
-		res.setContentType("text/xml;charset=UTF-8");
-		res.setHeader("Cache-Control", "no-cache");
-		
-		PrintWriter out = res.getWriter();
 		StringBuffer sb = new StringBuffer();
 		
 		String app_flag=(String)ServletActionContext.getServletContext().getAttribute("app_flag");

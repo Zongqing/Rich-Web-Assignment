@@ -22,7 +22,8 @@ public class LoginAction extends ActionSupport {
 		
 		String username = java.net.URLDecoder.decode(req.getParameter("username"), "UTF-8");
 		
-		req.setAttribute("userinfo", username);
+		req.getSession().setAttribute("userinfo", username);
+//		req.setAttribute("userinfo", username);
 		
 		return "success";
 	}

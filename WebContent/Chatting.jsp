@@ -35,8 +35,7 @@
     function submit()
     {
         var content = document.getElementById("content").value;
-        var url = "/RichWeb/handleAction.action?content="+content+"&ts="+new Date().getTime();
-        
+        var url = "/RichWeb/handleAction.action?content="+content;
         createXMLHttpRequest();
         xmlHttp.onreadystatechange = submit_change;
         url=encodeURI(url);
@@ -45,11 +44,12 @@
     }
     function submit_change()
     {
+    	
     	if(xmlHttp.readyState==4)
     	{
     		if(xmlHttp.status == 200)
     		{
-    			sunmit_update();
+    			submit_update();
     		}	
     	}
     }
@@ -65,7 +65,8 @@
     
     function check()
     {
-    	var url="/RichWeb/checkAction.action?ts="+new Date().getTime();
+    	
+    	var url="/RichWeb/checkAction.action";
     	createXMLHttpRequest();
     	xmlHttp.onreadystatechange = check_change;
     	url=encodeURI(url);
@@ -102,7 +103,8 @@
     
     function read()
     {
-    	var url = "/RichWeb/readAction.action?ts="+new Date().getTime();
+    	
+    	var url = "/RichWeb/readAction.action";
     	createXMLHttpRequest();
     	xmlHttp.onreadystatechange = read_change;
     	url = encodeURI(url);
@@ -139,7 +141,7 @@
     
     function handleEr()
     {
-    	var url = "/RichWeb/handleErAction.action?ts="+new Date().getTime();
+    	var url = "/RichWeb/handleErAction.action";
     	createXMLHttpRequest();
     	xmlHttp.onreadystatechange = handleEr_change;
     	url = encodeURI(url);
@@ -168,7 +170,7 @@
     
     function start()
     {
-    	setInterval("check()","200");
+    	setInterval(check,"200");
     	
     }
     window.onload=start;

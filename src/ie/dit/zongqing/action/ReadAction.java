@@ -30,8 +30,7 @@ public class ReadAction extends ActionSupport {
 			sb.append("</app_content>");
 		sb.append("</Lists>");
 		
-		out.print(sb.toString());
-		out.close();
+		
 		return "success";
 	}
 }
