@@ -1,5 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8" contentType="text/html; charset=US-ASCII"
-    pageEncoding="US-ASCII"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8" contentType="text/html; charset=US-ASCII"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -15,6 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta http-equiv="cache-ocontrol" content="no-cache">
     <meta http-equiv="expires" content="0">
     <meta http-equiv="keywords" content="keyword1, keyword2, keyword3">
+    <meta http-equiv="description" content="The Login Page">
     <!-- 
     	<link rel="stylesheet" type="text/css" href="styles.css">
      -->

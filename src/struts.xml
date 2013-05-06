@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+
+<package name="struts2" extends="struts-default">
+	
+	<action name="handleAction" class="ie.dit.zongqing.action.HandleAction">
+		<result name="success">/Chatting.jsp</result>
+	</action>
+	<action name="checkAction" class="ie.dit.zongqing.action.CheckAction">
+		<result name="success">/Chatting.jsp</result>
+	</action>
+	<action name="readAction" class="ie.dit.zongqing.action.ReadAction">
+		<result name="success">/Chatting.jsp</result>
+	</action>
+	<action name="loginAction" class="ie.dit.zongqing.action.LoginAction">
+		<result name="success">/Chatting.jsp</result>
+	</action>
+	<action name="handleErAction" class="ie.dit.zongqing.action.HandleErAction">
+		<result name="success">/Chatting.jsp</result>
+	</action>
+	
+	
+</package>
+<!--  
+<include file="struts-login.xml"/>
+-->
+</struts>
