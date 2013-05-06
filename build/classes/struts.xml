@@ -2,6 +2,14 @@
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- 
+   The apache struts2 framework.
+   ALl the actions are defined between <package> and </package>.
+   Actions should have attributes (name, class) and result tags.
+   If the return value from action file is matching the result name, 
+   then the action between <result> and </result> will be executed. 
+ -->
+
 <struts>
 <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />

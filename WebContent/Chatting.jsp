@@ -20,7 +20,10 @@
     -->
     
     <script type="text/javascript">
+    
+    //The XHR variable
     var xmlHttp;
+    //Function to active XHR
     function createXMLHttpRequest()
     {
         if(window.ActiveXObject)
@@ -31,7 +34,10 @@
             xmlHttp = new XMLHttpRequest();
         }
     }
-    
+    /*
+    Four functions (submit, submit_change, submit_update, submit_clear) 
+    to implement the send message function
+    */
     function submit()
     {
         var content = document.getElementById("content").value;
@@ -62,7 +68,10 @@
     {
     	document.getElementById("content").value="";
     }
-    
+    /*
+    Four functions (check, check_change, check_update, check_clear) used to
+    get the messages from other clients.
+    */
     function check()
     {
     	
@@ -100,7 +109,10 @@
     {
     	
     }
-    
+    /*
+    Four functions(read, read_change, read_update, read_clear) used to
+    add new messages to chat board
+    */
     function read()
     {
     	
@@ -138,7 +150,10 @@
     {
     	
     }
-    
+    /*
+    Fout functions (handleEr, handleEr_change, handleEr_update, handleEr_clear) used to
+    check if the new messages have beed added to the chat board.
+    */
     function handleEr()
     {
     	var url = "/RichWeb/handleErAction.action";
@@ -168,11 +183,15 @@
     	
     }
     
+    /*
+     The start function used to active the check action
+    */
     function start()
     {
     	setInterval(check,"200");
     	
     }
+    //Set the onload function
     window.onload=start;
     </script>
 </head>
